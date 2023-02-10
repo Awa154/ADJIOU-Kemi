@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    {% if message is defined and message %}
+    <div class="alert alert-info">{{message}}</div>
+    {% endif %}
+    <div class="col-md-3"></div>
+    <div class="col-md-6"><strong><h2 align="center">Bienvenue chez nous!</h2></strong></div>
+    <div class="col-md-3"></div>	
+</div>
+<div class="container">
+    <div class="row text-primary">
+        <h3>Liste de nos offres</h3>
+    </div>
+    <br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>OFFRES</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Assistance pour vente de produit ou promotion en ligne</td>
+                <td><a href="#" class="btn btn-success">Get package</a></td>
+                <td><a href="#" class="btn btn-info">No package</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Assistance pour création de site web, carte d'invitation, de visite</td>
+                <td><a href="#" class="btn btn-success">Get package</a></td>
+                <td><a href="#" class="btn btn-info">No package</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Conseil</td>
+                <td><a href="#" class="btn btn-success">Get package</a></td>
+                <td><a href="#" class="btn btn-info">No package</a></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Aide</td>
+                <td><a href="#" class="btn btn-success">Get package</a></td>
+                <td><a href="#" class="btn btn-info">No package</a></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Assistance publicitaire</td>
+                <td><a href="#" class="btn btn-success">Get package</a></td>
+                <td><a href="#" class="btn btn-info">No package</a></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Renseignement</td>
+                <td><a href="#" class="btn btn-success">Get package</a></td>
+                <td><a href="#" class="btn btn-info">No package</a></td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+<br>
+<br>
+<br>
+<div class="container" style="padding-left:80%;">
+    <a href="/" class="btn btn-danger">Déconnecter</a>
+    </div>
+    <br>
+{% endblock content%}

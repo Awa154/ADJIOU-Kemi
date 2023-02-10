@@ -1,0 +1,49 @@
+{% extends "base.html"%}
+
+{% block content %}
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-6 text-primary"><h3>Nouveau! Inscrivez-vous ici!</h3></div>
+</div>	
+		<div class="row">
+			<div class="col-md-3"></div>
+				<div class="col-md-5">
+					<div class="jumbotron"> 
+						<form action="{{url_for('inscrit')}}" method="post">
+							{% if message is defined and message %}
+								<div class="alert alert-info">{{message}}</div>
+							{% endif %}
+							<div class="form-row col-md-12">
+								<div class="form-group col-md-12">
+									<label for="email">Email </label>
+									<input type="email" name="email" class="form-control" id="name" placeholder="Entrer votre email">
+								</div>
+								<div class="form-group col-md-12">
+									<label for="name">Nom </label>
+									<input type="text" class="form-control" name="name" id="name" placeholder="Entrer votre nom">
+								</div>
+								<div class="form-group col-md-12">
+									<label for="pnom">Prénom</label>
+									<input type="text" name="pnom" class="form-control" id="pnom" placeholder="Entre votre prénom">
+								</div>
+								<div class="form-group col-md-12">
+									<label for="password">Password </label>
+									<input type="password" name="password" class="form-control" id="password" placeholder="Entre votre mot de passe">
+								</div>
+								<div class="form-group col-md-12">
+									<label for="password">Confirme password </label>
+									<input type="password" name="password2" class="form-control" id="password2" placeholder="Confirmer votre mot de passe">
+								</div>
+							</div>
+							<br>
+							<button type="submit" class="btn btn-info">S'inscrire</button>	
+							<a href="/" class="btn btn-danger">Annuler</a>
+						</form>
+					</div>
+				</div>
+				
+				<br>
+				<br>
+                
+{% endblock content%}
+
